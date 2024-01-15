@@ -59,12 +59,12 @@ ul {
   flex-wrap: wrap;
 }
 
-.g-item {
+.gallery-item {
   display: flex;
   width: calc((100% - 72px) / 3);
 }
 
-.g-item img {
+.gallery-item img {
   width: 100%;
   height: 100%;
 }

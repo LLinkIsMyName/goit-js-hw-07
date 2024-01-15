@@ -31,18 +31,13 @@ const images = [
 
 function createGallery(images) {
   const gallery = document.querySelector('.gallery');
+  let htmlString = '';
 
   images.forEach((image) => {
-    const li = document.createElement('li');
-    li.classList.add('g-item');
-
-    const img = document.createElement('img');
-    img.src = image.url;
-    img.alt = image.alt;
-
-    li.appendChild(img);
-    gallery.appendChild(li);
+    htmlString += `<li class="gallery-item"><img class="gallery-img" src="${image.url}" alt="${image.alt}"></li>`;
   });
+
+  gallery.insertAdjacentHTML('beforeend', htmlString);
 }
 
 createGallery(images);
